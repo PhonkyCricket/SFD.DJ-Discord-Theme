@@ -76,7 +76,7 @@
 	--user-modal-grayscale: var(--background-grayscale);
 	--user-modal-sepia: var(--background-sepia);
 	--user-modal-blur: calc(var(--background-blur) + 3px);
-	--home-icon: url(https://cdn.icon-icons.com/icons2/2221/PNG/512/logo_orange_discord_icon_134355.png);
+	--home-icon: url(https://svgur.com/i/VxF.svg);
 	--home-position: center;
 	--home-size: 40px
 }
