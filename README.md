@@ -1,5 +1,5 @@
 [discord-badge]: https://img.shields.io/discord/212324635356692500.svg?style=flat-square
-[discord-link]: https://clearvision.gitlab.io/join
+[discord-link]: https://discord.gg/tbJeu5v5dv/join
 
 <div align="center">
 
