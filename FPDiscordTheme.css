@@ -1,33 +1,22 @@
-/*! FP.DJ Beta v1.0.0 by the FP team */
+/**
+ * @name FPDJ
+ * @author FPDJ Team
+ * @version 1
+ * @description Highly customizable theme for BetterDiscord
+ * @invite tbJeu5v5dv
+ * @source https://raw.githack.com/F0xyProxy/FP.DJ-Discord-Theme/main/FPDiscordTheme.css
+*/
 
-
-/*! Powered by DiscordSelectors v0.1 */
-
+@import url('https://raw.githack.com/F0xyProxy/FP.DJ-Discord-Theme/main/FPDiscordTheme.css');
+@import url('https://gibbu.github.io/BetterDiscord-Themes/RadialStatus/base.css');
 :root {
-	--main-color: #2780e6;
-	--hover-color: #1e63b3;
-	--success-color: #43b581;
-	--danger-color: #982929;
-	--channel-unread: var(--main-color);
-	--channel-color: rgba(255, 255, 255, 0.3);
-	--muted-color: rgba(255, 255, 255, 0.1);
-	--channel-text-selected: #fff;
-	--url-color: var(--main-color);
-	--online-color: #43b581;
-	--idle-color: #faa61a;
-	--dnd-color: #982929;
-	--offline-color: #808080;
-	--streaming-color: #593695;
-	--main-font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-	--code-font: Consolas, Liberation Mono, Menlo, Courier, monospace;
-	--text-normal: rgb(220, 221, 222);
-	--text-muted: rgb(114, 118, 125);
-	--channels-width: 220px;
-	--members-width: 240px;
-	--avatar-roundness: 50%;
+	--main-color: #ff0000;
+	--hover-color: #00ff66;
+	--success-color: #00f4ff;
+	--danger-color: #0002ff;
+	--url-color: #ffffff;
+	--background-image: url('https://i.imgur.com/hDXBZPM.jpg');
 	--background-shading: 100%;
-	--background-overlay: rgba(0, 0, 0, .6);
-	--background-image: url(https://i.imgur.com/DKh6ieq.jpg);
 	--background-position: center;
 	--background-size: cover;
 	--background-repeat: no-repeat;
@@ -35,11 +24,46 @@
 	--background-brightness: 100%;
 	--background-contrast: 100%;
 	--background-saturation: 100%;
-	--background-invert: 0%;
 	--background-grayscale: 0%;
-	--background-sepia: 0%;
-	--background-blur: 0px;
-	--backdrop-overlay: rgba(0, 0, 0, .8);
+	--background-invert: 0%;
+	--background-blur: 4px;
+	--background-overlay: rgba(0, 0, 0, 0.6);
+	--user-popout-image: url('https://i.imgur.com/BsQFfyM.jpg');
+	--user-popout-position: center;
+	--user-popout-size: cover;
+	--user-popout-repeat: no-repeat;
+	--user-popout-attachment: fixed;
+	--user-popout-brightness: 100%;
+	--user-popout-contrast: 100%;
+	--user-popout-saturation: 100%;
+	--user-popout-grayscale: 0%;
+	--user-popout-invert: 0%;
+	--user-popout-blur: 3px;
+	--user-modal-image: url('https://i.imgur.com/ZdX0JfJ.jpg');
+	--user-modal-position: center;
+	--user-modal-size: cover;
+	--user-modal-repeat: no-repeat;
+	--user-modal-attachment: fixed;
+	--user-modal-brightness: 100%;
+	--user-modal-contrast: 100%;
+	--user-modal-saturation: 100%;
+	--user-modal-grayscale: 0%;
+	--user-modal-invert: 0%;
+	--user-modal-blur: 4px;
+	--home-icon: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5QQECi4nUyUolwAACLlJREFUeNrt3F1sVGkZB/D/837NOT1nzgydj2Y6baEUqNCyFYRAU3GhAbN8iBfGi83GELnxogsqqAkXXJiFgF8JMWvixka9cG9Ws4kaExITdXc1uiaLC7LUXYxNWN3CigVKCwvtzOtFp2yB7XyUwpkZnl9ykkn69pznPM+cc97z9n0LMMYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4yxOiLDDmChbdq0CTt37sSlS5dcIURGa91BRE8opbqNMZ/UWq+RUmaVUm2e53mO44hsNjs5OjqaO3v2LIaGhsI+hQVFYQewEJqbmxGJROTo6GjLrVu31ufz+Q35fP7j+Xx+KYC4tdYDIABoABbAFIAcEY0DuCyE+JcQ4pSU8i+O47yRzWYvTUxM2OHh4bBP7fF18OBBAEAqlQpc131Kaz0ohPgnEd3GdBEr3ojoAynl340x3/U8r7elpSWitcahQ4fCPt3Hx8mTJxGNRtHU1OS5rvt5pdRviWgC8yzqXJsQ4rJS6iXP8za3t7frZDIZ9qnXv2w2i66uLuF53gal1C+I6CYWuLC4v9D/01o/7/v+cgBYuXJl2GmoPydOnIDrukgmk9FIJPJ1IcQIHnJhcX+hzzmO83RbW5tOp9Nhp6R+rFu3DgAQBEGr1vpnD/KMfdCNiMaMMc81NjYG0Wg07NTUvtWrV4OI4HneKinlHxBSYXF3kSe11j+JxWIZx3Fw/PjxsNNUm/r6+gAAvu+vlFL+CfMvyBQRXRNCjAgh3hZCnBdCXCKi60SUm+9+lVIvB0HQ7DgOtmzZEna65lSV78EDAwMYHByEMWbZjRs3fprL5foqOimiq0KIN6WUrwshTksph7XWV3K53BgAIaUMbt++ncjn8x25XO4T+Xx+Uz6f77TWupUcR2v9YhAEA5OTk9fGxsbCTlvt8H0f8Xg8oZR6GZV1hEa01s97ntfX3NzsWWuxb9++OY/T3d2Nbdu2USKRSLquu0sp9SIRjZZ7PCKaMsZ8u62tTScSibDTVhtSqRQ6OjqUMeYYgLJuoUQ0rrUe9H1/zdKlS2Vzc3NFx7TWIh6PI5vNmoaGhs1KqV8R0a0yj33dcZwvAMCSJUvCTl91e/LJJwEAjuN8loiuobyr9rzruk+3tLREHvQqOnLkCFzXRVNTU9QY8zUhxPvlxuD7/upIJIIDBw6EncbqFYvFsGjRorSU8o8oI7FSylc8z1sLAG1tbQsWRyaTwcaNG4Xrup8RQpwvJxat9Y9bW1sjqVQq7DRWp/b2dgCAMeYb5fRupZS/831/mRACu3btWvB4VqxYAQDwPG+jEGKoVDxENOa67k4A2L9/f9jprD6+7yMIgiXlJFNKedr3/VVaa2zduvWhxbR27VoAgOu624UQ75WKSyn1y0wm08BX8T1mxncjkch+AHkUv1Iuu667HQC6uroeemyLFy+eie3ZUh0vIrruuu5TSqk77/EMQDKZRDqdjpfx7M1rrZ9bv369aGpqemTxxeNxJJNJXyn1Eko/iwd7e3tla2tr2GmtDqdOnYLWGg0NDdsKf4Avdmt+MxaLZR/1OPDAwAC01jPP44vFYhRCDAdBsIzHqgt6e3sBAMaYb6H47S8XiUS+DEyPUT9qLS0t2L17t9Ba/6BEnFOO4zwDADt27Ag3udUglUohnU77UspXUPzK+EcsFmsL68rYu3cvjDHwPO9TRHQVxW/TL1y4cIEeRR+h6nmeB9/3V5bqpWqtXzh27Bh1dnaGFmsymUQqlYqW+jJKKV9PJBIxHr4EZp6/O4r1UInotuu6nxNC4PDhw6HFumrVKgCAMeabKH63ec/3/U7f90PMbBWw1gIAjDEDKJ6w//i+v8LzvLBDhtYaruvuKvGFnHBdd7MxJuxwIcI8+NGjR2c+Zou1I6IR3/ffD4IgzHABAEopENEwgKtFmkWIKJXL5cION9wCzySAiEpdmv+VUt4IM9YZkUgExphRIcSVudpYa+Xk5GTzY1/gchHR9VgsliMKf36C53lwXfcmgIli7ay1VbFqpCYKLKW8eO7cuVw1vFcS0Z2tFtREgTHdeQEP/1WuVgrM5okLXOe4wHWOC1znuMB1jgtc51TYAcxHYQibALQAaEThNQrT030uABgDgHJfVa298zEJ4N5J1ZcKW9n7qyY1V+BZxdgO4HsA0viwwADwawAHAFypcH+dAH4I4IlZ+yMAbwH4EoAha4FaexWv1Vu0D+CrAD6G6Ss4MWt7BtPFn128cnwRwOZ79tcIYBOmC1yTarXAUQBzzXTXACqd0yMBdBT5eTeAihamVYtaLXApC/3okajSlZil1GuBWQEXuM5xgescF7jOcYHrHBe4znGB56FWpusAIRe40kRVUWLzmP6PtcVirWwc7SEJtcBK3RmPeLdE03fvaR9qzMuXLx8nonNztSGim0qpd6oh3tB5nodYLLZYSvkaPnqdz2uxWGzxzKoGawFrkbEWb1sLO8f2nUK7kgrtpLX4eZH9/d5aNFgL7NmzB1LKmaWk7+D+VQ1TWusfpdNpv7GxMez0hm/mf1FGo9F2Y8wRpdSrQoghpdSrxpgj0Wi0fXa7sAsMTK/6P3PmDDzPW6O1/r6U8s9CiLeUUr9xHOfZxsbGeDQavbM0hwHo6elBf38/ZTIZ3/f9pkwm4/f391NPT89d7aqhwNO/Z9Hd3Y2+vj6RSqWCIAhS7e3tEWttVa0LrpqHxOnTp4Hp29w4gPHx8XGMjIyEHdacZnX48ihMMBgbG6umjiAAfk2qe1zgD5W69GrygVqrBf4AxZdv/rvC/eUAXC7y8wsAboV90o+Fmc6TtfiKtbhZ6ATlC5u1Fn+zFh3ldmBn7a/fWox8xP4uWotPl9tpqzbV1SMoUyHRDQC2YHom5OxZlW8AGAIqnlUpAWwAsBx3T7o7D+CvAKaqrP/EGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYeP/8Hnl8leOlrs7gAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDQtMDRUMTA6NDY6MzktMDQ6MDBECZeeAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA0LTA0VDEwOjQ2OjM5LTA0OjAwNVQvIgAAAABJRU5ErkJggg==');
+	--home-position: center;
+	--home-size: 40px;
+	--channel-unread: var(--main-color);
+	--channel-color: rgba(255, 255, 255, 0.3);
+	--muted-color: rgba(255, 255, 255, 0.1);
+	--online-color: #00ff8b;
+	--idle-color: #ebff00;
+	--dnd-color: #ff0000;
+	--streaming-color: #5e00ff;
+	--offline-color: #303030;
+	--main-font: Whitney;
+	--code-font: Consolas;
+	--backdrop-overlay: rgba(0, 0, 0, 0.8);
 	--backdrop-image: var(--background-image);
 	--backdrop-position: var(--background-position);
 	--backdrop-size: var(--background-size);
@@ -52,33 +76,21 @@
 	--backdrop-grayscale: var(--background-grayscale);
 	--backdrop-sepia: var(--background-sepia);
 	--backdrop-blur: var(--background-blur);
-	--user-popout-image: var(--background-image);
-	--user-popout-position: var(--background-position);
-	--user-popout-size: var(--background-size);
-	--user-popout-repeat: var(--background-repeat);
-	--user-popout-attachment: var(--background-attachment);
-	--user-popout-brightness: var(--background-brightness);
-	--user-popout-contrast: var(--background-contrast);
-	--user-popout-saturation: var(--background-saturation);
-	--user-popout-invert: var(--background-invert);
-	--user-popout-grayscale: var(--background-grayscale);
-	--user-popout-sepia: var(--background-sepia);
-	--user-popout-blur: calc(var(--background-blur) + 3px);
-	--user-modal-image: var(--background-image);
-	--user-modal-position: var(--background-position);
-	--user-modal-size: var(--background-size);
-	--user-modal-repeat: var(--background-repeat);
-	--user-modal-attachment: var(--background-attachment);
-	--user-modal-brightness: var(--background-brightness);
-	--user-modal-contrast: var(--background-contrast);
-	--user-modal-saturation: var(--background-saturation);
-	--user-modal-invert: var(--background-invert);
-	--user-modal-grayscale: var(--background-grayscale);
-	--user-modal-sepia: var(--background-sepia);
-	--user-modal-blur: calc(var(--background-blur) + 3px);
-	--home-icon: url(https://svgur.com/i/VxF.svg);
-	--home-position: center;
-	--home-size: 40px
+	--bd-blue: var(--main-color);
+	--bd-blue-hover: var(--hover-color);
+	--bd-blue-active: var(--hover-color);
+	--channels-width: 220px;
+	--members-width: 240px;
+	--rs-small-spacing: 0px;
+	--rs-large-spacing: 0px;
+	--rs-width: 3px;
+	--rs-avatar-shape: 50%;
+	--rs-online-color: #43b581;
+	--rs-idle-color: #faa61a;
+	--rs-dnd-color: #f04747;
+	--rs-offline-color: #636b75;
+	--rs-streaming-color: #643da7;
+	--rs-invisible-color: #747f8d;
 }
 
 .appMount-3lHmkl {
